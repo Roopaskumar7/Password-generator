@@ -18,7 +18,6 @@ def generate_password(length=12, use_upper=True, use_lower=True, use_digits=True
     password = ''.join(random.choice(characters) for _ in range(length))
     return password
 
-# User input
 print("Welcome to the Password Generator!")
 length = int(input("Enter the desired password length: "))
 use_upper = input("Include uppercase letters? (y/n): ").lower() == 'y'
@@ -26,6 +25,5 @@ use_lower = input("Include lowercase letters? (y/n): ").lower() == 'y'
 use_digits = input("Include numbers? (y/n): ").lower() == 'y'
 use_special = input("Include special characters? (y/n): ").lower() == 'y'
 
-# Generate and display password
 password = generate_password(length, use_upper, use_lower, use_digits, use_special)
 print(f"\nGenerated Password: {password}")
